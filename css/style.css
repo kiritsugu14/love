@@ -1,0 +1,133 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"); /* Add Poppins font */
+
+/* Apply Poppins font globally */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+/* Custom navbar styles */
+
+/* Set background color to #00111c (dark) */
+.navbar {
+  background-color: #00111c !important;
+}
+
+/* Set font color to white for all navbar text */
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-brand,
+.offcanvas .navbar-nav .nav-link,
+.offcanvas .offcanvas-title {
+  color: #fff !important;
+}
+
+/* Set active nav-link color to #ffb404 */
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: #ffb404 !important;
+}
+
+/* Adjust hover effect to use active color (yellow) */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link:hover {
+  color: gray !important;
+}
+
+/* Ensure dropdown menu text color */
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: #000;
+}
+
+/* Make sure dropdown items retain white color when hovered */
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  color: #ffb404 !important;
+}
+
+/* Change background color of offcanvas (mobile menu) */
+.offcanvas {
+  background-color: #00111c !important; /* Dark background when the menu is open */
+}
+
+/* Change text color in offcanvas */
+.offcanvas .navbar-nav .nav-link,
+.offcanvas .offcanvas-title {
+  color: #fff !important; /* Ensure text remains white */
+}
+
+/* Ensure dropdown items have correct color in offcanvas */
+.offcanvas .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: #000; /* Dropdown items text color */
+}
+
+.offcanvas .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  color: #ffb404 !important; /* Hover color for dropdown items */
+}
+
+/* Hamburger menu icon background transparent and lines white */
+.navbar-toggler {
+  border: none; /* Remove the default border */
+}
+
+.navbar-toggler-icon {
+  background-color: transparent !important; /* Make the background transparent */
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+  background-color: #fff !important; /* Set the hamburger lines to white */
+}
+
+/* Custom CSS to change background color of cards to gray */
+.card-body {
+  background-color: #f0f0f0;
+  /* light gray */
+}
+
+/* Ensure body doesn't shift when modal is open */
+body.modal-open {
+    overflow: hidden;
+    padding-right: 17px; /* Adjust for scrollbar width */
+}
+
+/* Navbar fix: make sure it's on top of the modal */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050; /* Ensure it is above the modal */
+}
+
+/* Body padding to prevent overlap with the fixed navbar */
+body {
+    padding-top: 70px; /* Adjust based on navbar height */
+}
+
+/* Offcanvas menu */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    z-index: 1060; /* Ensure it's behind the navbar */
+}
+
+.offcanvas.show {
+    left: 0; /* Slide in when active */
+}
+
+/* Adjust offcanvas width on different screen sizes */
+.offcanvas-start {
+    width: 75%; /* Default to 75% width on mobile */
+}
+
+@media (min-width: 768px) {
+    .offcanvas-start {
+        width: 60%; /* 60% width for tablets and larger screens */
+    }
+}
+
+
